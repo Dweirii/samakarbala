@@ -114,3 +114,5 @@ export const posts: Post[] = [
     "html": "<h2>From Golden Wheat to Premium Flour 1</h2>\n<p><strong>Brief:</strong> At <b>Etihad Mills</b>, golden wheat grains are processed with <b>state-of-the-art technologies</b> into premium, pure flour—ideal for both bakeries and families.</p>\n<p>At <strong>Etihad Mills</strong>, golden wheat grains are smoothly transformed into premium-quality flour that perfectly suits a wide range of baked goods—from traditional breads to fine pastries.</p>\n<p>The company is committed to delivering <strong>100% pure flour</strong>, with no bleaching agents, preservatives, or artificial additives—making it a safe and wholesome choice for both families and professional bakeries.<br /><blockquote>“Our mission is to provide flour of unrivaled purity and quality, trusted by both households and professionals alike.”</p>\n<p>— Management, Etihad Mills</blockquote><br />With this dedication to quality and reliability, <strong>Etihad Mills</strong> continues to strengthen its reputation as a leading and trusted name in the food industry.</p>"
   }
 ];
+
+export const getPost = (slug: string) => posts.find((p) => p.slug === slug);
