@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ContactForm } from "@/components/contact-form";
 import { PageHeader } from "@/components/page-header";
 import { contact, getDictionary } from "@/lib/dictionary";
 import { hasLocale } from "@/lib/i18n";
@@ -45,37 +44,19 @@ export default async function Contact({ params }: PageProps<"/[lang]/contact">) 
         ))}
       </section>
 
-      <section className="container-site mt-16 grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-7">
-          <h2 className="display text-3xl md:text-4xl">{c.formTitle}</h2>
-          <div className="mt-8">
-            <ContactForm
-              to={contact.email}
-              labels={{
-                name: c.name,
-                emailField: c.emailField,
-                subject: c.subject,
-                message: c.message,
-                send: c.send,
-                sendNote: c.sendNote,
-              }}
-            />
-          </div>
+      <section className="container-site mt-4">
+        <div className="aspect-[4/5] overflow-hidden rounded-panel bg-shell sm:aspect-[21/9]">
+          <iframe
+            title={t.company.address}
+            src="https://www.google.com/maps?q=Karbala%20Strategic%20Road%2C%20Iraq&output=embed"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="size-full grayscale-[0.4]"
+          />
         </div>
-        <div className="flex flex-col lg:col-span-5">
-          <div className="min-h-80 flex-1 overflow-hidden rounded-panel bg-shell">
-            <iframe
-              title={t.company.address}
-              src="https://www.google.com/maps?q=Karbala%20Strategic%20Road%2C%20Iraq&output=embed"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="size-full min-h-80 grayscale-[0.4]"
-            />
-          </div>
-          <a href={contact.mapsHref} target="_blank" rel="noreferrer" className="btn btn-quiet mt-4 self-start">
-            {c.directions}
-          </a>
-        </div>
+        <a href={contact.mapsHref} target="_blank" rel="noreferrer" className="btn btn-quiet mt-4">
+          {c.directions}
+        </a>
       </section>
     </>
   );
