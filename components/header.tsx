@@ -18,7 +18,7 @@ export function Header({ lang, t }: { lang: Locale; t: Dictionary }) {
             width={640}
             height={498}
             preload
-            className="h-12 w-auto"
+            className="h-14 w-auto"
           />
         </Link>
         <HeaderNav

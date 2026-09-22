@@ -28,7 +28,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       {/* Hero */}
       <section className="container-site pt-10 md:pt-16">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-end">
-          <h1 className="display rise text-[2.75rem] sm:text-6xl lg:col-span-8 lg:text-[5.25rem]">
+          <h1 className="display rise text-[2.75rem] sm:text-6xl lg:col-span-8 lg:text-[5rem]">
             {t.home.heroTitle}
           </h1>
           <div className="rise lg:col-span-4 lg:pb-2" style={{ animationDelay: "120ms" }}>
@@ -82,7 +82,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <p className={`text-sm font-medium ${style.accent}`}>{c.kind}</p>
                 <h3 className="display mt-2 text-3xl">{c.name}</h3>
                 <p className="mt-3 max-w-xs text-ink-soft">{c.body}</p>
-                <div className="relative mt-6 aspect-square w-full">
+                <div className="relative mt-6 aspect-[4/3] w-full md:aspect-square">
                   <Image
                     src={style.image}
                     alt=""

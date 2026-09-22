@@ -76,9 +76,9 @@
 
   /* Wide cut of Readex Pro for display type. */
   .display {
-    font-variation-settings: "HEXP" 100;
+    font-variation-settings: "HEXP" 28;
     font-weight: 600;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.03em;
     line-height: 0.98;
     text-wrap: balance;
   }

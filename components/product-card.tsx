@@ -19,7 +19,7 @@ export function ProductCard({ product, lang }: { product: Product; lang: Locale 
         />
       </div>
       <h3 className="mt-3 font-medium leading-snug">{productName(product, lang)}</h3>
-      {weight && <p className="mt-0.5 text-sm text-ink-soft">{weight}</p>}
+      {weight && <p className="mt-0.5 line-clamp-1 text-sm text-ink-soft">{weight}</p>}
     </Link>
   );
 }

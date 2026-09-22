@@ -41,7 +41,7 @@ export default async function About({ params }: PageProps<"/[lang]/about">) {
       {/* Story */}
       <section className="container-site mt-24 grid gap-10 md:mt-32 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <div className="relative aspect-[347/183] overflow-hidden rounded-panel lg:aspect-[4/5]">
+          <div className="relative aspect-[347/183] overflow-hidden rounded-panel">
             <Image src="/media/quality-inspection.png" alt="" fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-cover" />
           </div>
         </div>
