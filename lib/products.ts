@@ -1169,3 +1169,26 @@ export const products: Product[] = [
     ]
   }
 ];
+
+export const categoryOrder: CategorySlug[] = ["alrayan", "bawadi", "bawadi-factories"];
+
+export const isCategory = (value: string): value is CategorySlug =>
+  (categoryOrder as string[]).includes(value);
+
+/** Visual identity for each brand, mirroring its packaging. */
+export const categoryStyle: Record<CategorySlug, { tint: string; accent: string; image: string }> = {
+  alrayan: { tint: "bg-rayan-tint", accent: "text-rayan", image: "/media/brand-alrayan.png" },
+  bawadi: { tint: "bg-bawadi-tint", accent: "text-bawadi", image: "/media/brand-bawadi-frozen.png" },
+  "bawadi-factories": { tint: "bg-shell", accent: "text-comb", image: "/media/brand-bawadi-processed.png" },
+};
+
+export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
+
+export const productsIn = (category: CategorySlug) => products.filter((p) => p.category === category);
+
+export const productName = (p: Product, lang: "en" | "ar") => (lang === "ar" ? p.nameAr : p.name);
+
+export const productSpec = (p: Product, key: SpecKey, lang: "en" | "ar") => {
+  const spec = p.specs.find((s) => s.key === key);
+  return spec ? (lang === "ar" ? spec.ar : spec.en) : undefined;
+};
