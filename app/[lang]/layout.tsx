@@ -26,7 +26,6 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
     metadataBase: new URL("https://samakarbala.iq"),
     title: { default: t.meta.title, template: `%s | ${t.company.name}` },
     description: t.meta.description,
-    icons: { icon: "/brand/favicon.png" },
     alternates: { languages: { en: "/en", ar: "/ar" } },
     openGraph: { siteName: t.company.name, images: ["/media/hero-range.jpg"] },
   };
